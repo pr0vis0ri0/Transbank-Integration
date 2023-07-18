@@ -1,22 +1,9 @@
-const products = [
-    { title: 'Frutilla', esFruta: true , id: 1},
-    { title: 'Manzana', esFruta: true , id: 2},
-    { title: 'Ajo', esFruta: false , id: 3},
-];
+import React from 'react';
+import Counter from './Counter';
 
-export default function ListaDeCompras() {
-    const itemsLista = products.map(product =>
-            <li
-                key={product.id}
-                style= {{
-                    color: product.esFruta ? 'magenta' : 'darkgreen'
-                }}>
-                {product.title}
-            </li>
-        );
-
+export default function Home() {
     return (
-        <ul>{itemsLista}</ul>
-    );
+        <Counter />
+    )
 }
   
